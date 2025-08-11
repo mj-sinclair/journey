@@ -18,23 +18,49 @@ section {
   max-width: 800px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
   backdrop-filter: blur(6px);
+
+  /* Animation setup */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Animate each section with slight delay */
+section:nth-child(1) { animation-delay: 0.2s; }
+section:nth-child(2) { animation-delay: 0.4s; }
+section:nth-child(3) { animation-delay: 0.6s; }
+section:nth-child(4) { animation-delay: 0.8s; }
+section:nth-child(5) { animation-delay: 1s; }
+
+/* Keyframes for fade + slide up */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Headings */
 h1, h2, h3 {
   color: #00d4ff;
   font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover {
+  color: #ff7eb3;
 }
 
 /* Links */
 a {
   color: #00d4ff;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 a:hover {
   color: #ff7eb3;
+  transform: scale(1.05);
 }
 
 /* Navigation Bar */
@@ -51,11 +77,12 @@ nav a {
   margin: 5px 0;
   color: #f4f4f4;
   border-radius: 6px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
   background: rgba(255,255,255,0.1);
+  transform: translateX(5px);
 }
 
 /* Footer */
