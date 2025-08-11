@@ -22,6 +22,22 @@
   </header>
   <main>
     <section>
+      <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+    <!-- Disable CAPTCHA -->
+    <input type="hidden" name="_captcha" value="false">
+    
+    <!-- Redirect to a thank you page or back to your site -->
+    <input type="hidden" name="_next" value="https://mj-sinclair.github.io/journey/thankyou.html">
+
+    <!-- Form Fields -->
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit">Send</button>
+</form>
+
       <h2>Get in Touch With Me!!</h2>
       <form class="contact-form" onsubmit="return validateForm()">
         <label for="name">Name:</label>
@@ -57,4 +73,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
