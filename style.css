@@ -77,13 +77,13 @@ nav {
   background: rgba(0, 0, 0, 0.6);
   padding: 15px;
   border-radius: 8px;
-  max-width: 200px;
+  text-align: center; /* Centers the items */
 }
 
 nav a {
-  display: block;
+  display: inline-block; /* Makes them sit side by side */
+  margin: 0 10px; /* Space between tabs */
   padding: 10px 15px;
-  margin: 5px 0;
   color: #f4f4f4;
   border-radius: 6px;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -91,8 +91,9 @@ nav a {
 
 nav a:hover {
   background: rgba(255,255,255,0.1);
-  transform: translateX(5px);
+  transform: translateY(-3px); /* Little hover lift */
 }
+
 
 /* Footer */
 footer {
@@ -102,3 +103,4 @@ footer {
   color: #aaa;
   margin-top: 30px;
 }
+
