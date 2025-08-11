@@ -93,6 +93,12 @@ nav a:hover {
   background: rgba(255,255,255,0.1);
   transform: translateY(-3px); /* Little hover lift */
 }
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: row !important; /* Force horizontal */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+  }
+}
 
 
 /* Footer */
@@ -103,4 +109,5 @@ footer {
   color: #aaa;
   margin-top: 30px;
 }
+
 
